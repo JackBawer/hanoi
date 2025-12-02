@@ -8,7 +8,7 @@ This repository contains implementations of the Tower of Hanoi puzzle in C, both
 main.c          # Main file to run tests
 recursive.c     # Recursive Hanoi implementation
 iterative.c     # Iterative Hanoi implementation
-hanoi.h         # Optional header file
+hanoi.h         # Header file
 Makefile        # Build automation
 ```
 
@@ -20,20 +20,32 @@ Use the provided Makefile:
 make
 ```
 
-This will produce the executable `hanoi`.
+This will produce the executable `hanoi` (or `hanoi.exe` on Windows).
 
 Alternatively, compile directly with gcc:
 
 ```bash
+# Linux/macOS/WSL
 gcc main.c recursive.c iterative.c -Wall -O2 -o hanoi
+
+# Windows CMD/PowerShell (MinGW or MSVC)
+gcc main.c recursive.c iterative.c -Wall -O2 -o hanoi.exe
 ```
 
 ## Run
 
-After building, run:
+After building:
+
+* **Linux/macOS / WSL / Git Bash:**
 
 ```bash
 ./hanoi
+```
+
+* **Windows CMD / PowerShell:**
+
+```powershell
+.\hanoi.exe
 ```
 
 The program will print a table of disk counts, execution times, and move counts for both recursive and iterative methods.
@@ -49,5 +61,4 @@ make clean
 ## Notes
 
 * Object files (`*.o`) and the executable are ignored in Git via `.gitignore`.
-* Designed for educational purposes; works on Linux/macOS or any POSIX environment.
-
+* Designed for educational purposes; works on Linux/macOS, Windows, or any POSIX-like environment.
