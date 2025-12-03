@@ -1,6 +1,6 @@
 #include "hanoi.h"
 
-unsigned long long move_count;
+unsigned long move_count;
 
 void hanoi_recursive(int n, char src, char dest, char aux) {
     if (n == 0){

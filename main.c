@@ -18,7 +18,7 @@ int main() {
         hanoi_recursive(n, 'A', 'C', 'B');
         clock_t r2 = clock();
         double trec = (double)(r2 - r1) / CLOCKS_PER_SEC;
-        unsigned long long moves = move_count;
+        unsigned long moves = move_count;
 
         move_count = 0;
         clock_t i1 = clock();
@@ -26,7 +26,7 @@ int main() {
         clock_t i2 = clock();
         double titer = (double)(i2 - i1) / CLOCKS_PER_SEC;
 
-        printf("| %4d |     %10.6f      |     %10.6f      | %14llu |\n",
+        printf("| %4d |     %10.6f      |     %10.6f      | %14lu |\n",
                n, trec, titer, moves);
     }
 
